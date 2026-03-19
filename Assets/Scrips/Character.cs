@@ -69,17 +69,18 @@ public class Character : MonoBehaviour
             isGrounded = false;
         }
     }
-
-    public void MovedDown()
+      public void MoveDown()
     {
         if (!isActive || isRolling) return;
         if (!isGrounded)
         {
-            characterRigidbody.AddForce(Vector3.down * jumpForce * 2, ForceMode.Impulse);
+            characterRigidbody.AddForce(Vector3.down*jumpForce*2,ForceMode.Impulse);
         }
         characterAnimator.Play(characterData.rollAnimationName, 0, 0f);
         onRoll?.Invoke();
         isRolling = true;
+        normalCollider.enabled = false;
+        rollCollider.enabled = true;
         StartCoroutine(ResetRoll());
     }
 
@@ -108,22 +109,26 @@ public class Character : MonoBehaviour
 
     private IEnumerator ResetRoll()
     {
+        yield return null;
         yield return new WaitForSeconds(characterAnimator.GetCurrentAnimatorStateInfo(0).length);
         isRolling = false;
         normalCollider.enabled = true;
         rollCollider.enabled = false;
     }
-    public void OnCollisionEnter (Collision collision)
+ 
+    public void OnCollisionEnter(Collision collision)
     {
         if (isActive && collision.gameObject.CompareTag("Ground"))
         {
             if (!isRolling)
             {
-                characterAnimator.Play(characterData.runAnimationName, 0, 0f);
+            characterAnimator.Play(characterData.runAnimationName, 0, 0f);
             }
+            isGrounded = true;
         }
-          isGrounded = true;
     }
+        
+        
 }
 
 

@@ -1253,7 +1253,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1303526868}
         m_TargetAssemblyTypeName: Character, Assembly-CSharp
-        m_MethodName: MovedDown
+        m_MethodName: MoveDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1541,7 +1541,7 @@ Transform:
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.44, z: -6.3}
+  m_LocalPosition: {x: 0, y: 1.44, z: -5.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1561,6 +1561,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 1303526865}
   smoothSpeed: 0.125
+  minX: -1.5
+  maxX: 1.5
+  verticalThreshold: 1
+  verticalSmoothSpeed: 5
 --- !u!1 &1065001717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,6 +3254,8 @@ MonoBehaviour:
   - {fileID: 576450121}
   - {fileID: 1792482405}
   - {fileID: 119977266}
+  - {fileID: 800516980}
+  - {fileID: 413442362}
   securePlatformPrefabs:
   - {fileID: 1795473127}
   initialPlatforms: 5
