@@ -12,15 +12,21 @@ public class PlataformManager : MonoBehaviour
     [SerializeField] 
     private int initialPlatforms = 5;
     [SerializeField]
-    private float speed = 5f;
+    private float minspeed = 5f;
+     [SerializeField]
+    private float maxspeed = 12f;
+     [SerializeField]
+    private float acceleration = 0.1f;
     [SerializeField]
     private UnityEvent<Platform> onPlatformPassed;
     private bool isRunning = true;
     private GameObject lastPlatform;
     private int platformsInstantiated = 0;
+    private float speed;
 
     public void StartGame()
     {
+        speed = minspeed;
         lastPlatform = null;
         platformsInstantiated = 0;
         InitializePlatforms();
@@ -73,6 +79,7 @@ public class PlataformManager : MonoBehaviour
         if (isRunning)
         {
             transform.Translate(Vector3.back * speed * Time.deltaTime);
+            speed = Mathf.Min(speed + acceleration * Time.deltaTime, maxspeed);
         }
     }
     public void StopPlatforms()

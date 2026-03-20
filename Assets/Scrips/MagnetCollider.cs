@@ -11,7 +11,7 @@ public class MagnetCollider : MonoBehaviour
             CoinFollow coinFollow = other.GetComponent<CoinFollow>();
             if (coinFollow != null)
             {
-                coinFollow.StartFollowing(character);
+                coinFollow.StartFollow(character);
             }
         }
     }
