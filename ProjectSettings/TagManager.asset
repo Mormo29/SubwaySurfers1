@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - JumpPowerUp
   - Magnet
+  - JetPack
   layers:
   - Default
   - TransparentFX

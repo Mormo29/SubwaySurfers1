@@ -37,6 +37,21 @@ public class Character : MonoBehaviour
     private bool isMoving = false;
     private bool isRolling = false;
     private bool isActive = false;
+    private bool isFlying = false;
+    public bool IsFlying
+    {
+        get { return isFlying; }
+        set { isFlying = value; }
+    }
+    public CharacterData CharacterData => characterData;
+    public Rigidbody CharacterRigidbody => characterRigidbody;
+    public Animator CharacterAnimator => characterAnimator;
+    public bool IsActive => isActive;
+    public void PlayGroundAnimation(string animationName)
+    {
+        if (isFlying) return;
+        characterAnimator.Play(animationName, 0, 0f);
+    }
     private void Awake() 
     {
         characterRigidbody = GetComponent<Rigidbody>();
@@ -60,10 +75,11 @@ public class Character : MonoBehaviour
     }
     public void Jump()
     {
-        if (!isActive) return;
+        if (!isActive || isFlying) return;
         if (isGrounded)
         {
             onJump?.Invoke();
+            PlayGroundAnimation(characterData.jumpAnimationName);
             characterAnimator.Play(characterData.jumpAnimationName, 0, 0f);
             characterRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
@@ -71,11 +87,12 @@ public class Character : MonoBehaviour
     }
       public void MoveDown()
     {
-        if (!isActive || isRolling) return;
+        if (!isActive || isRolling || IsFlying) return;
         if (!isGrounded)
         {
             characterRigidbody.AddForce(Vector3.down*jumpForce*2,ForceMode.Impulse);
         }
+        PlayGroundAnimation(characterData.rollAnimationName);
         characterAnimator.Play(characterData.rollAnimationName, 0, 0f);
         onRoll?.Invoke();
         isRolling = true;
