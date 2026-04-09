@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     {
         StartGame();
     }
-
     public void StartGame()
     {
         onGameStart?.Invoke();
