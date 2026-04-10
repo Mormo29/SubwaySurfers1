@@ -68,6 +68,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88964d94aa8bb8946829a3b1080626da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88964d94aa8bb8946829a3b1080626da, type: 3}
+      propertyPath: m_TagString
+      value: JetPack
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -75,6 +83,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 88964d94aa8bb8946829a3b1080626da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2899537900443489308}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 88964d94aa8bb8946829a3b1080626da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7581440645156615883}
   m_SourcePrefab: {fileID: 100100000, guid: 88964d94aa8bb8946829a3b1080626da, type: 3}
 --- !u!1 &3461170566870076560 stripped
 GameObject:
@@ -96,9 +107,22 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.16872168, y: 0.1407768, z: 0.11832574}
   m_Center: {x: 0.017295532, y: 0.065795094, z: -0.0046793735}
+--- !u!114 &-7581440645156615883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461170566870076560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae0b42e4fa736d47a1691c0d7d0076c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotate
+  rotationSpeed: {x: 0, y: 0, z: 0}
