@@ -1202,8 +1202,8 @@ Transform:
   m_GameObject: {fileID: 127706336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.45814, y: 1.31, z: -1.50833}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.5459, y: 2.63, z: 0}
+  m_LocalScale: {x: 2.2559, y: 1.9751, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 520584723}
@@ -1741,7 +1741,7 @@ Transform:
   m_GameObject: {fileID: 506771914}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.66766, y: 0, z: 2.44843}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2231,6 +2231,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1170546115}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ButtonPause
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &735699303
@@ -3014,6 +3026,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1170546115}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ButtonPause
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1018142728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88964d94aa8bb8946829a3b1080626da, type: 3}
@@ -3647,6 +3671,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1170546115}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Start
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1208478176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4054,6 +4090,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1170546115}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Power_Up
           m_BoolArgument: 0
         m_CallState: 2
   onMagnetCollected:
@@ -4510,6 +4558,8 @@ MonoBehaviour:
   maxPlatformsNumber: 7
   powerUpPools:
   - {fileID: 2122481336}
+  - {fileID: 1601812875}
+  - {fileID: 506771915}
   powerUpOffset: 1
 --- !u!1 &1488472834
 GameObject:
@@ -5118,7 +5168,7 @@ Transform:
   m_GameObject: {fileID: 1601812874}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.15767, y: 0, z: -4.5008698}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5679,6 +5729,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1170546115}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Start
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1786970886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5983,6 +6045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1931296487}
   - component: {fileID: 1931296488}
+  - component: {fileID: 1931296489}
   m_Layer: 0
   m_Name: InstantiateFlyingPlatforms
   m_TagString: Untagged
@@ -6018,6 +6081,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InstantiatePoolObjects
   prefab: {fileID: 1491586884345510418, guid: bcf50474f621bb8439d1089212dea6d1, type: 3}
+--- !u!114 &1931296489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931296486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3f30b558017564ca4b0648a237979e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InstantiatePoolObjects
+  prefab: {fileID: 1491586884345510418, guid: 929fcf3e12c797b439849b2378c50326, type: 3}
 --- !u!1 &1959352459
 GameObject:
   m_ObjectHideFlags: 0
@@ -6122,6 +6198,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1170546115}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ButtonPause
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1959352462
@@ -6577,7 +6665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPowerUp
   magnet: {fileID: 240218321}
-  duration: 5
+  duration: 6
   magnetCollider: {fileID: 127706339}
 --- !u!1 &2073022256
 GameObject:

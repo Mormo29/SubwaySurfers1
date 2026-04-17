@@ -93,7 +93,6 @@ public class Character : MonoBehaviour
             characterRigidbody.AddForce(Vector3.down*jumpForce*2,ForceMode.Impulse);
         }
         PlayGroundAnimation(characterData.rollAnimationName);
-        characterAnimator.Play(characterData.rollAnimationName, 0, 0f);
         onRoll?.Invoke();
         isRolling = true;
         normalCollider.enabled = false;
@@ -114,7 +113,7 @@ public class Character : MonoBehaviour
     {
         if (isMoving) return;
         onMoveToSide?.Invoke();
-        characterAnimator.Play(characterData.moveAnimationName, 0, 0f);
+        PlayGroundAnimation(characterData.moveAnimationName);
         isMoving = true;
         Vector3 targetPosition = transform.position + direction * distanceToMove;
 
